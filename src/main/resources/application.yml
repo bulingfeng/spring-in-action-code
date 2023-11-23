@@ -3,3 +3,7 @@ server:
   banner:
     charset: UTF-8
     location: classpath:banner.txt
+
+logging:
+  level:
+    root: info
