@@ -1,5 +1,6 @@
 server:
   port: 8081
+  shutdown: graceful
   banner:
     charset: UTF-8
     location: classpath:banner.txt
@@ -7,3 +8,9 @@ server:
 logging:
   level:
     root: info
+
+spring:
+  lifecycle:
+    timeout-per-shutdown-phase: 1m
+  profiles:
+    active: dev

@@ -1,5 +1,7 @@
 package org.example.entity;
 
+import javax.annotation.PostConstruct;
+
 /**
  * 测试懒加载的效果
  */
@@ -11,6 +13,10 @@ public class WriteEntity {
         this.name = name;
     }
 
+    @PostConstruct
+    public void init(){
+        System.out.println("init....");
+    }
 
     public void print(String message){
         System.out.println(message);
